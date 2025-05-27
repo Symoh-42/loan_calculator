@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="loan-calculator">
+        <div class="top">
+            <h2>Loan Calculator</h2>
+            <form>
+                <div class="group">
+                    <div class="title">Amount</div>
+                    <input type="number" value="20000" class="loan-amount" id="loanAmount" required>
+                </div>
+                
+                <div class="group">
+                    <div class="title">Interest Rate (%)</div>
+                    <input type="number" value="15" class="interest-rate" id="interestRate" step="0.1" required>
+                </div>
+                
+                <div class="group">
+                    <div class="title">Tenure (months)</div>
+                    <input type="number" value="6" class="loan-tenure" id="loanTenure" required>
+                </div>
+            </form>
+        </div>
+        
+        <div class="result">
+            <div class="left">
+                <div class="section">
+                    <h3>Monthly EMI</h3>
+                    <div class="value" id="emiValue">3,689</div>
+                </div>
+                
+                <div class="section">
+                    <h3>Total Interest Payable</h3>
+                    <div class="value" id="interestValue">2,134</div>
+                </div>
+                
+                <div class="section">
+                    <h3>Total Amount</h3>
+                    <div class="value" id="totalValue">22,134</div>
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateLoan()">Calculate</button>
+            </div>
+            
+            <div class="right">
+                Chart Area
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
